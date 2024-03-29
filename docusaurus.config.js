@@ -8,10 +8,11 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
+  // themes: ['@docusaurus/theme-search-algolia'],
   // kaali:{
   title: 'Electron Forge',
   tagline: 'A complete tool for building and publishing Electron Applications.',
-  favicon: 'img/favicon.ico',
+  // favicon: 'img/favicon.ico',
   // }
   // Set the production url of your site here
   url: 'https://your-docusaurus-site.example.com',
@@ -64,12 +65,20 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      algolia:{
+        appId: 'HL0HSV62RK',
+        apiKey: '72ebf02146698733b7114c7b36da0945',
+        indexName: 'docs',
+        contextualSearch: true,
+        searchParameters: {},
+      },
+
       colors: {
         primary: 'red', // PleaseChat ka primary color
         secondary: 'green', // PleaseChat ka secondary color
       },
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      // image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: 'Electron Forge',
         logo: {
@@ -83,10 +92,20 @@ const config = {
             position: 'left',
             label: 'Tutorial',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          // {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/electron/forge',
             label: 'GitHub',
+            position: 'right',
+          },
+          {
+            href: 'www.google.com',
+            label: 'DISCORD',
+            position: 'right',
+          },
+          {
+            href: 'www.google.com',
+            label: 'API',
             position: 'right',
           },
         ],
